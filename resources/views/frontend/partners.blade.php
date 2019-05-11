@@ -15,7 +15,7 @@
                 <h2>Insurance Partners</h2>
               </div>
             </div>
-            <div class="span8">
+            <div class="span8 bapp">
               <ul class="breadcrumb">
                 <li><a href={{ route('indexpage') }}><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
                 

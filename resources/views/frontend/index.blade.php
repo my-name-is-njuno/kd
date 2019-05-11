@@ -28,7 +28,7 @@ Lavington Green Dental
               <div class="span12">
                 <!-- Slide #1 caption -->
                 <div class="nivo-caption" id="caption-1">
-                  <div>
+                  <div class="bapp">
                     <h2>Lavington <strong>Green Dental</strong></h2>
                     <p>
                       We are a dental clinic in Nairobi Kenya with an experienced team.
@@ -38,7 +38,7 @@ Lavington Green Dental
                 </div>
                 <!-- Slide #2 caption -->
                 <div class="nivo-caption" id="caption-2">
-                  <div>
+                  <div  class="bapp">
                     <h2>Our <strong>Location</strong></h2>
                     <p>
                       Lavington Chadarama Mall next to Lavington Mall on James Gichuru Road, 15 minutes Drive from Nairobi CBD<br>
@@ -49,7 +49,7 @@ Lavington Green Dental
                 </div>
                 <!-- Slide #3 caption -->
                 <div class="nivo-caption" id="caption-3">
-                  <div>
+                  <div  class="bapp">
                     <h2>Our <strong>Services</strong></h2>
                     <p>
                       We offer a wide range of dental services from extraction, dental surgeries, root canal etc.
@@ -63,6 +63,13 @@ Lavington Green Dental
         </div>
         <!-- end slider -->
       </section>
+
+
+
+
+
+
+
       <section class="callaction">
         <div class="container">
           <div class="row">

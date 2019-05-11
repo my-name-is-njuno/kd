@@ -17,7 +17,7 @@
                 <h2>Testimonials</h2>
               </div>
             </div>
-            <div class="span8">
+            <div class="span8  bapp">
               <ul class="breadcrumb">
                 <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
 
