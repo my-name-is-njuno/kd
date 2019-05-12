@@ -31,6 +31,6 @@ Route::get('partners', 'PagesController@partners')->name('partners');
 
 
 // appoitments routes
-Route::post('/apt/store', 'AppointmentController@store')->name('store');
+Route::post('/apt/store', 'AppointmentController@store');
 // messages routes
-Route::post('/msg/store', 'MessageController@store')->name('storemessage');
+Route::post('/msg/store', 'MessageController@store');

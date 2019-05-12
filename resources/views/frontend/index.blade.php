@@ -31,7 +31,7 @@ Lavington Green Dental
                   <div class="bapp">
                     <h2>Lavington <strong>Green Dental</strong></h2>
                     <p>
-                      We are a dental clinic in Nairobi Kenya with an experienced team.
+                      Lavington Green Dental Suite is a Dental Surgery Consultancy Research and management organization.
                     </p>
                     <a href="about.html" class="btn btn-theme">Read More</a>
                   </div>

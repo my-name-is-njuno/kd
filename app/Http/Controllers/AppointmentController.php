@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Appointment;
 
+use Mail;
+
+use App\Mail\Newappointment;
+
 class AppointmentController extends Controller
 {
     public function index()
@@ -48,6 +52,9 @@ class AppointmentController extends Controller
             $app->message= $r->message;
 
             $app->save();
+
+            Mail::send(new Newappointment($app));
+
             return response()->json(['success'=>'Appointment Booked Successfully, You will be contacted Soon. Thank You']);
         }
             

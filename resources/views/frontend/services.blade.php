@@ -82,7 +82,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-0" data-type="health">
+                    <li class="item-thumbs span6 design" data-id="id-0" data-type="health">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Fissure sealants" href="{{ asset('wb/img/works/thumbs/services/fissure-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -97,7 +97,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-1" data-type="health">
+                    <li class="item-thumbs span6 design" data-id="id-1" data-type="health">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Fluoride Application" href="{{ asset('wb/img/works/thumbs/services/floride-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -111,7 +111,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-2" data-type="general">
+                    <li class="item-thumbs span6 design" data-id="id-2" data-type="general">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Tooth Extraction" href="{{ asset('wb/img/works/thumbs/services/xla-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -125,7 +125,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-3" data-type="general">
+                    <li class="item-thumbs span6 design" data-id="id-3" data-type="general">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Filling" href="{{ asset('wb/img/works/thumbs/services/filling-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -139,7 +139,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-4" data-type="general">
+                    <li class="item-thumbs span6 design" data-id="id-4" data-type="general">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Root Canal Treatment" href="{{ asset('wb/img/works/thumbs/services/rc-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -153,7 +153,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-5" data-type="general">
+                    <li class="item-thumbs span6 design" data-id="id-5" data-type="general">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Crown and Bridge" href="{{ asset('wb/img/works/thumbs/services/crown-big.jpg') }}">
                           <span class="overlay-img"></span>
@@ -168,7 +168,7 @@
 
 
                      <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-6" data-type="cosmetic">
+                    <li class="item-thumbs span6 design" data-id="id-6" data-type="cosmetic">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Cosmetic dentistry" href="{{ asset('wb/img/works/thumbs/image_01_big.jpg') }}">
                         <span class="overlay-img"></span>
@@ -182,14 +182,14 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 design" data-id="id-5" data-type="prothetic">
+                    <li class="item-thumbs span6 design" data-id="id-5" data-type="prothetic">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                      <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Dental Prosthesis" href="{{ asset('wb/img/works/thumbs/image_02_big.jpg') }}">
+                      <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Dental Prosthesis" href="{{ asset('wb/img/works/thumbs/dental-crown-big.jpg') }}">
                           <span class="overlay-img"></span>
-                          <span class="overlay-img-thumb"> Dental Prosthesis</span>
+                          <span class="overlay-img-thumb"> Dental Crowns</span>
                           </a>
                       <!-- Thumb Image and Description -->
-                      <img src="{{ asset('wb/img/works/thumbs/image_02.jpg') }}" alt="">
+                      <img src="{{ asset('wb/img/works/thumbs/dental-crown-small.jpg') }}" alt="">
                     </li>
                     <!-- End Item Project -->
 
@@ -205,7 +205,7 @@
 
 
                     <!-- Item Project and Filter Name -->
-                    <li class="item-thumbs span4 photography" data-id="id-4" data-type="ortho">
+                    <li class="item-thumbs span6 photography" data-id="id-4" data-type="ortho">
                       <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                       <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Dentofacial Orthopedics" href="{{ asset('wb/img/works/thumbs/image_05_big.jpg') }}">
                           <span class="overlay-img"></span>
