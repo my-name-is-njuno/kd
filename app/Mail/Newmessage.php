@@ -6,9 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Appointment;
 
-class Newappointment extends Mailable
+use App\Message;
+
+class Newmessage extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,11 +19,12 @@ class Newappointment extends Mailable
      * @return void
      */
     
-    public $appt;
 
-    public function __construct(Appointment $app)
+    public $message;
+
+    public function __construct(Message $msg)
     {
-        $this->appt = $app;
+        $this->message = $msg;
     }
 
     /**
@@ -32,8 +34,9 @@ class Newappointment extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mail.appointment')
+
+        return $this->markdown('mail.newmessage')
                     ->to('pmnjuno@gmail.com')
-                    ->subject($this->appt->name . ' Request For an Appointment');
+                    ->subject($this->message->name . ' New message For Lavington Green Dental');
     }
 }

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Enter Email To Send Link
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

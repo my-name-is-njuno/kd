@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Message;
 
+
+use App\Mail\Newmessage;
+use Mail;
+
 class MessageController extends Controller
 {
     
@@ -28,9 +32,13 @@ class MessageController extends Controller
             $app->subject= $r->csubject;
             $app->message= $r->cmessage;
             $app->email= $r->cemail;
-            
 
+            
+            
             $app->save();
+
+            Mail::send(new Newmessage($app));
+            
             return response()->json(['success'=>'Message sent Successfully, You will be contacted Soon. Thank You']);
         }
             

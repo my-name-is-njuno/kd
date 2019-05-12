@@ -289,7 +289,7 @@ header .logo img {
 
 .headnav {
     float: right;
-    margin: 15px 0 0 0;
+    margin: 15px 0 10px 0;
     border-bottom: 1px dotted #e6e6e6;
 }
 

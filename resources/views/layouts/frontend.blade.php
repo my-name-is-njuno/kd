@@ -68,7 +68,8 @@
                                 <h4 id="mySignupModalLabel">Book an <strong>appointment</strong></h4>
                             </div>
                             <div class="modal-body">
-                                <form class="form-horizontal" id="" method="post">
+                                <div id="hidewhensending">
+                                <form class="form-horizontal" id="" method="post" id="">
 
                                     <div class="control-group">
                                         <label class="control-label" for="inputName">Name</label>
@@ -104,6 +105,16 @@
 
 
                                     <div class="control-group">
+                                        <label class="control-label" for="inputDate">Preffered Date</label>
+                                        <div class="controls">
+                                            <input type="date" name="preffered_date" required id="input_preffered_date"
+                                                placeholder="preffered_date">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="control-group">
                                         <label class="control-label" for="inputMessage">Message</label>
                                         <div class="controls">
                                             <textarea name="message" required id="inputMessage"
@@ -120,7 +131,24 @@
                                         </div>
 
                                     </div>
+
+
+                                    
                                 </form>
+                                </div>
+
+
+                                <div id="showwhensending">
+                                    <img src="{{ asset('images/sending.png')}}">
+                                </div>
+
+
+                                <div id="showwhensent">
+                                    <img src="{{ asset('images/sent.jpg')}}">
+                                </div>
+
+
+
                             </div>
                         </div>
                         <!-- end signup modal -->
@@ -279,6 +307,10 @@
 
     <script>
         jQuery(document).ready(function(){
+            jQuery('#showwhensending').hide()
+            jQuery('#showwhensent').hide()
+
+
             jQuery('#appoitmentForm').click(function(e){
                e.preventDefault();
                $.ajaxSetup({
@@ -287,6 +319,20 @@
                   }
               });
 
+
+
+
+               if ((jQuery('#inputName').val() == '') || (jQuery('#inputEmail').val() == '' )|| (jQuery('#inputMobile').val() == '') || (jQuery('#inputLocation').val() == '') || (jQuery('#inputMessage') == "") || (jQuery('#input_preffered_date') == "") ) {
+
+                    alert("Ensure all inputs is filled")
+
+                    return false;
+
+               }
+
+
+               jQuery('#hidewhensending').hide()
+               jQuery('#showwhensending').show()
                jQuery.ajax({
 
                 type: 'POST',
@@ -296,12 +342,23 @@
                      email: jQuery('#inputEmail').val(),
                      mobile: jQuery('#inputMobile').val(),
                      location: jQuery('#inputLocation').val(),
-                     message: jQuery('#inputMessage').val()
+                     message: jQuery('#inputMessage').val(),
+                     preffered_date: jQuery('#input_preffered_date').val()
                   },
                   success: function(result){
 
+                        jQuery('#inputName').val("")
+                        jQuery('#inputEmail').val("")
+                        jQuery('#inputMobile').val("")
+                        jQuery('#inputLocation').val("")
+                        jQuery('#inputMessage').val("")
+                        jQuery('#input_preffered_date').val("")
+
+                     jQuery('#showwhensending').hide()
+                     jQuery('#showwhensent').show()
                      $("#bookappointment").modal('hide');
-                     alert(result.success);
+                     
+
             }});
             });
 
@@ -324,6 +381,9 @@
                       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                   }
               });
+
+
+               alert("Sending Message");
 
                jQuery.ajax({
 
