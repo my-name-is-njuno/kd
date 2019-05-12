@@ -1,30 +1,15 @@
 @extends('layouts.app')
 
+@section('title')
+  Admin Page
+@endsection
+
 @section('content')
   
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <div class="card border-success">
-          <div class="card-header bg-transparent border-success">Links</div>
-          <div class="card-body text-success">
-            <ul class="list-group">
-
-              <li class="list-group-item">
-                <a href="">Appointments</a>
-              </li>
-              <li class="list-group-item">
-                <a href="">Services</a>
-              </li>
-              <li class="list-group-item">
-                <a href="">Partners</a>
-              </li>
-              
-
-            </ul>
-          </div>
-          
-        </div>
+        @include('layouts.backendsidenav')
       </div>
 
       <div class="col-sm-9">
@@ -32,7 +17,7 @@
           <div class="card-body">
             <h5 class="card-title">Appointments</h5>
             
-            <ul class="list-unstyled">
+            
               <table class="table table-bordered table-sm">
                 <thead>
                   <tr>
@@ -62,7 +47,11 @@
 
                     <tr>
                       <td>
-                        <a href="" class="btn btn-outline-info"> <i class="fa fa-eye"></i> view</a>
+                        @if ($app->ifViewed())
+                          <button class="btn btn-sm btn-outline-success"><i class="fa fa-check"> Old</i></button>
+                        @else
+                          <button class="btn btn-sm btn-outline-info"><i class="fa fa-check"> New</i></button>
+                        @endif
                       </td>
 
                       <td>
@@ -74,7 +63,7 @@
                       </td>
 
                       <td>
-                        <a href="" class="btn btn-outline-info"> <i class="fa fa-eye"></i> view</a>
+                        <a href={{ route('showappt', ['id'=>$app->id]) }} class="btn btn-sm btn-outline-danger"> <i class="fa fa-eye"></i> view</a>
                       </td>
 
                     </tr>
@@ -82,7 +71,14 @@
                   @endforeach
                 </tbody>
               </table>
-            </ul>
+            
+
+
+
+
+            {{ $apps->links() }}
+
+
 
 
           </div>

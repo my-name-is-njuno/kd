@@ -15,16 +15,19 @@ class AppointmentController extends Controller
     public function index()
     {
 
-        $apps = Appointment::all();
+        $apps = Appointment::latest()->paginate(5);
 
         return view('backend.home', compact('apps'));
 
     }
 
-    public function create()
+    public function show($id)
     {
 
-
+        $appt = Appointment::findOrFail($id);
+        $appt->view = 1;
+        $appt->save();
+        return view('backend.showappt', compact('appt'));
 
     }
 

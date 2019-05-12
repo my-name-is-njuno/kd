@@ -28,11 +28,12 @@
 
     <!-- Fav and touch icons -->
 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('wb/ico/favicon-1.ico') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('wb/ico/favicon-1.ico') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('wb/ico/favicon-1.ico') }}" />
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('wb/ico/favicon-1.ico') }}" />
-    <link rel="shortcut icon" href="{{ asset('wb/ico/favicon-1.ico') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('wb/ico/favicon.png') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('wb/ico/favicon.png') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('wb/ico/favicon.png') }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('wb/ico/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('wb/ico/favicon.png') }}" />
+
 
 
 </head>
@@ -331,12 +332,22 @@
                }
 
 
+
+               var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+
+               if (!re.test(jQuery('#inputEmail').val()))
+                {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+
+
                jQuery('#hidewhensending').hide()
                jQuery('#showwhensending').show()
                jQuery.ajax({
 
                 type: 'POST',
-                  url: "{{ url('/apt/store') }}",
+                  url: "{{ url('/lgds/apt/store') }}",
                   data: {
                      name: jQuery('#inputName').val(),
                      email: jQuery('#inputEmail').val(),
@@ -388,7 +399,7 @@
                jQuery.ajax({
 
                 type: 'POST',
-                  url: "{{ url('/msg/store') }}",
+                  url: "{{ url('/lgds/msg/store') }}",
                   data: {
                      cname: jQuery('#in-name').val(),
                      cemail: jQuery('#in-email').val(),
