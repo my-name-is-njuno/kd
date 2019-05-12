@@ -6,14 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes(['register'=>false]);
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'AppointmentController@index')->name('home');
 
 
-Route::group(['prefix' => 'lgds'], function() {
-
-    
-
-});
 
 
 

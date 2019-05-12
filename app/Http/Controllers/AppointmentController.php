@@ -15,9 +15,9 @@ class AppointmentController extends Controller
     public function index()
     {
 
-        $apps = Appoitment::all();
+        $apps = Appointment::all();
 
-        return view('appointments.index', compact('apps'));
+        return view('backend.home', compact('apps'));
 
     }
 
