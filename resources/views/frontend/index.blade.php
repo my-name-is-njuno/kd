@@ -11,17 +11,23 @@ Lavington Green Dental
 
 @section('content')
 
+
+
+
+
     <section id="featured">
         <!-- start slider -->
         <!-- Slider -->
         <div id="nivo-slider">
           <div class="nivo-slider">
             <!-- Slide #1 image -->
-            <img src="{{ asset('wb/img/slides/nivo/bg-2.jpg') }}" alt="" title="#caption-1" />
+            <img src="{{ asset('wb/img/slides/nivo/bg-6.jpg') }}" alt="" title="#caption-1" />
             <!-- Slide #2 image -->
-            <img src="{{ asset('wb/img/slides/nivo/bg-3.jpg') }}" alt="" title="#caption-2" />
+            <img src="{{ asset('wb/img/slides/nivo/bg-9.jpg') }}" alt="" title="#caption-2" />
             <!-- Slide #3 image -->
-            <img src="{{ asset('wb/img/slides/nivo/bg-1.jpg') }}" alt="" title="#caption-3" />
+            <img src="{{ asset('wb/img/slides/nivo/bg-7.jpg') }}" alt="" title="#caption-3" />
+            <!-- Slide #3 image -->
+            <img src="{{ asset('wb/img/slides/nivo/bg-8.jpg') }}" alt="" title="#caption-3" />
           </div>
           <div class="container">
             <div class="row">
@@ -37,7 +43,7 @@ Lavington Green Dental
                   </div>
                 </div>
                 <!-- Slide #2 caption -->
-                <div class="nivo-caption" id="caption-2">
+                <div class="nivo-caption" id="caption-2" >
                   <div  class="bapp">
                     <h2>Our <strong>Location</strong></h2>
                     <p>
@@ -88,6 +94,10 @@ Lavington Green Dental
           </div>
         </div>
       </section>
+
+
+
+
       <section id="content">
         <div class="container">
           <div class="row">

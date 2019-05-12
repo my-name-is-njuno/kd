@@ -65,72 +65,46 @@
             </div>
           </div>
           <!-- end divider -->
-          <div class="row text-center">
+          <div class="row">
+
             <div class="span12">
+
               <h4>Team Behind <strong>Lavington Green Dental Suite</strong></h4>
               
             </div>
 
-            <div class="span3">
-              <img src="{{ asset('wb/img/dummies/team1.jpg') }}" alt="" class="img-polaroid" />
-              <div class="roles">
-                <p class="lead">
-                  <strong>Dr Halima Sebit</strong>
-                </p>
-                <p>
-                  Dentist
-                </p>
-              </div>
-            </div>
-            <div class="span3">
-              <img src="{{ asset('wb/img/dummies/team2.jpg') }}" alt="" class="img-polaroid" />
-              <div class="roles">
-                <p class="lead">
-                  <strong>Dr Arnold Malit</strong>
-                </p>
-                <p>
-                  Dentist
-                </p>
-              </div>
-            </div>
-            <div class="span3">
-              <img src="{{ asset('wb/img/dummies/team3.jpg') }}" alt="" class="img-polaroid" />
-              <div class="roles">
-                <p class="lead">
-                  <strong>Ms Winne </strong>
-                </p>
-                <p>
-                  Marketing Manager
-                </p>
-              </div>
-            </div>
-            
-            <div class="span3 text-center">
-              <img src="{{ asset('wb/img/dummies/team4.jpg') }}" alt="" class="img-polaroid" />
-              <div class="roles">
-                <p class="lead">
-                  <strong>Ms Terry </strong>
-                </p>
-                <p>
-                  Customer Care
-                </p>
-              </div>
-            </div>
-          
 
-
-            {{-- <div class="span3">
-              <img src="{{ asset('wb/img/dummies/team5.jpg') }}" alt="" class="img-polaroid" />
+            <div class="span6">
+              <img src="{{ asset('wb/img/dummies/team7.jpg') }}" alt="" class="img-polaroid" />
               <div class="roles">
                 <p class="lead">
-                  <strong>Ms Terry Wairimu</strong>
+                  <strong>The Dentists</strong>
                 </p>
                 <p>
-                  Customer Support
+                  Managed by Dr Halima Sebit and Dr Arnold Malit.
                 </p>
               </div>
-            </div> --}}
+            </div> 
+
+            <div class="span6">
+              <img src="{{ asset('wb/img/dummies/team6.jpg') }}" alt="" class="img-polaroid" />
+              <div class="roles">
+                <p class="lead">
+                  <strong>The Whole Team</strong>
+                </p>
+                <p>
+                  Experienced and dedicated to get your smile back.
+                </p>
+              </div>
+            </div>
+               
           </div>
+
+
+
+
+
+
           <!-- divider -->
           <div class="row">
             <div class="span12">
