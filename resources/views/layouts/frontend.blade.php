@@ -262,6 +262,7 @@
                     <div class="span4">
                         <div class="widget">
                             <h5 class="widgetheading">Location</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8228304045256!2d36.76856641475482!3d-1.2799368359802856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f19f7edc50833%3A0xeb900cfe6d0c0312!2sChandarana+Foodplus+Supermarket+(Lavington+Branch)!5e0!3m2!1sen!2ske!4v1553178724708" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                             <address>
                                 <strong>Lavington Green Shopping Centre</strong><br>
                                 Chandarana Building,3rd floor, room 301,<br>
