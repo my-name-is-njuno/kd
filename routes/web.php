@@ -9,14 +9,15 @@ Auth::routes(['register'=>false]);
 
 
 
+	// appoitments routes
+	Route::post('/apt/store', 'AppointmentController@store');
+	// messages routes
+	Route::post('/msg/store', 'MessageController@store');
+
 
 Route::group(['prefix' => 'lgds', 'middleware'=>'auth'], function() {
 
 	Route::get('/home', 'AppointmentController@index')->name('home');
-    // appoitments routes
-	Route::post('/apt/store', 'AppointmentController@store');
-	// messages routes
-	Route::post('/msg/store', 'MessageController@store');
 
 	Route::get('/apt/view/{id}', 'AppointmentController@show')->name('showappt');
 

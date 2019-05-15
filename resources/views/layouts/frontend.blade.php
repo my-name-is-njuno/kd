@@ -246,12 +246,13 @@
 
                     <div class="span4">
                         <div class="widget">
-                            <h5 class="widgetheading">Working Hours:</h5>
+                            <h5 class="widgetheading">Working Hours</h5>
                             <address>
                                 {{-- <strong>We operate from</strong><br> --}}
-                                Monday to Friday 8.00am – 5.00pm.<br>
-                                Saturdays we between 8.00am – 3.00pm.
-                        
+                                Monday to Friday: 8.30am – 5.00pm.<br>
+                                Saturdays: 8.00am – 2.00pm. <br>
+                                Sundays and public holidays: closed
+
                             </address>
 
                         </div>
@@ -260,10 +261,10 @@
 
                     <div class="span4">
                         <div class="widget">
-                            <h5 class="widgetheading">Our Location</h5>
+                            <h5 class="widgetheading">Location</h5>
                             <address>
-                                <strong>Lavington Nairobi</strong><br>
-                                Chandarana Building, room 301,<br>
+                                <strong>Lavington Green Shopping Centre</strong><br>
+                                Chandarana Building,3rd floor, room 301,<br>
                                 Along James Gichuru Road
                             </address>
                             <p>
@@ -348,7 +349,7 @@
                jQuery.ajax({
 
                 type: 'POST',
-                  url: "{{ url('/lgds/apt/store') }}",
+                  url: "{{ url('/apt/store') }}",
                   data: {
                      name: jQuery('#inputName').val(),
                      email: jQuery('#inputEmail').val(),
@@ -400,7 +401,7 @@
                jQuery.ajax({
 
                 type: 'POST',
-                  url: "{{ url('/lgds/msg/store') }}",
+                  url: "{{ url('/msg/store') }}",
                   data: {
                      cname: jQuery('#in-name').val(),
                      cemail: jQuery('#in-email').val(),

@@ -8,7 +8,7 @@ use App\Appointment;
 
 use Mail;
 
-use App\Mail\Apppointment;
+use App\Mail\Newappointment;
 
 class AppointmentController extends Controller
 {
@@ -58,7 +58,7 @@ class AppointmentController extends Controller
 
             $app->save();
 
-            Mail::send(new Apppointment($app));
+            Mail::send(new Newappointment($app));
 
             return response()->json(['success'=>'Appointment Booked Successfully, You will be contacted Soon. Thank You']);
         }
