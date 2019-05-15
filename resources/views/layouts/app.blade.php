@@ -81,6 +81,9 @@
 
 
 <div class="container mt-4">
+
+    @include('layouts.message')
+
     <div class="row">
 
         <div class="col-sm-12">

@@ -248,9 +248,10 @@
                         <div class="widget">
                             <h5 class="widgetheading">Working Hours:</h5>
                             <address>
-                                <strong>We operate from</strong><br>
-                                Monday to Friday 9.00am – 5.00pm.<br>
-                                Saturdays we operate between 9.00am – 1.00pm.
+                                {{-- <strong>We operate from</strong><br> --}}
+                                Monday to Friday 8.00am – 5.00pm.<br>
+                                Saturdays we between 8.00am – 3.00pm.
+                        
                             </address>
 
                         </div>
