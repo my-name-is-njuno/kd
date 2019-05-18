@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use File;
+use Session;
+
 
 use App\Service;
 use Image;
@@ -13,14 +16,14 @@ class CrudController extends Controller
 {
     public function serviceindex()
     {
-    	$services = Service::all();
+    	$services = Service::paginate(5);
     	return view('backend.services.index', compact('services'));
     }
 
 
     public function partnerindex()
     {
-    	$partners = Partner::all();
+    	$partners = Partner::paginate(5);
     	return view('backend.partners.index', compact('partners'));
     }
 
@@ -29,31 +32,36 @@ class CrudController extends Controller
     {
 
     	$this->validate($r, [
-    		'name'=>'required',
+    		'name'=>'required|unique:services',
     		'description'=>'required',
     		'picture'=>'required|image|mimes:jpg,jpeg,gif,png'
     	]);
 
-    	$pat = new Partner();
+    	$ser = new Service();
 
 
-        $logo_destination = public_path('images/');
-        if (!file_exists($logo_destination)) {
-            mkdir($logo_destination);
-        }
+        
     	
-        $logo = $r->file('picture');
-        $logo_name = time().str_slug($r->name).".".$logo->getClientOriginalExtension();
-        $logo_modified = Image::make($logo->getRealPath());
-        $logo_modified->resize(320,120)->save($logo_destination.$logo_name);
+        $serviceimage = $r->file('picture');
+        $ext = $r->file('picture')->getClientOriginalExtension();
+        $servicename = str_slug($r->name). "_".time().".".$ext;
+        $servicename_large = str_slug($r->name). "-large_".time().".".$ext;
+        $serr = Image::make($serviceimage->getRealPath());
+        $destination = public_path('/images/services/' . $servicename);
+        $destination_large = public_path('/images/services/' . $servicename_large);
+        $serr->resize(570,400)->save($destination); 
+        $serr->resize(800,532)->save($destination_large); 
 
 
 
-    	$pat->name = $r->name;
-    	$pat->description = $r->description;
-    	$pat->logo = $logo_name;
+    	$ser->name = $r->name;
+    	$ser->description = $r->description;
+    	$ser->picture = $servicename;
+        $ser->picture_big = $servicename_large;
 
-    	$pat->save();
+    	$ser->save();
+
+        Session::flash('success','Service added successfully');
     	return back();
     	
     }
@@ -62,7 +70,7 @@ class CrudController extends Controller
     public function partneradd(Request $r)
     {
     	$this->validate($r, [
-    		'name'=>'required',
+    		'name'=>'required|unique:partners',
     		'picture'=>'required|image|mimes:jpg,jpeg,gif,png'
     	]);
 
@@ -70,21 +78,24 @@ class CrudController extends Controller
 
 
 
-    	$destination = public_path('/images/logos/');
+    	
 
     	$logoimage = $r->file('picture');
     	$ext = $r->file('picture')->getClientOriginalExtension();
-    	$logoname = str_slug($r->name). "_".time().$ext;
+    	$logoname = str_slug($r->name). "_".time().".".$ext;
     	$loggo = Image::make($logoimage->getRealPath());
-    	$loggo->resize(310,120)->save($destination, $logoname); 
+        $destination = public_path('/images/logos/' . $logoname);
+    	$loggo->resize(310,120)->save($destination); 
 
 
 
     	$pat->name = $r->name;
-    	$pat->description = $r->description;
     	$pat->logo = $logoname;
+        
 
     	$pat->save();
+
+        Session::flash('success','Partner addeded successfully');
     	return back();
 
     }
@@ -93,12 +104,36 @@ class CrudController extends Controller
 
     public function servicedelete($id)
     {
-    	# code...
+    	$ser = Service::findOrFail($id);
+        $image_path = public_path('/images/services/'.$ser->picture);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
+        $ser->delete();
+        
+
+        Session::flash('success','Service deleted successfully');
+
+        return redirect()->route('manageservices');
     }
 
 
     public function partnerdelete($id)
     {
-    	# code...
+    	
+        $pat = Partner::findOrFail($id);
+        $image_path = public_path('/images/patners/'.$pat->logo);
+        $image_path = public_path('/images/patners/'.$pat->logo);
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+        }
+        $pat->delete();
+        
+
+        Session::flash('success','Partner deleted successfully');
+
+        return redirect()->route('managepartners');
+
+
     }
 }

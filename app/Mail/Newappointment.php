@@ -33,7 +33,7 @@ class Newappointment extends Mailable
     public function build()
     {
         return $this->markdown('mail.newappointment')
-                    ->to(['lavingtongreendental@gmail.com'])
+                    ->to(['pmnjuno@gmail.com'])
                     ->subject($this->appt->name . ' Request For an Appointment');
     }
 }

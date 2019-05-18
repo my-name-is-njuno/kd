@@ -37,63 +37,15 @@
            
 
 
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/fa.png') }}" class="p-2 m-3" alt="" />
-                  
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/uap.png') }}" class="p-2 m-3" alt="" />
+                    @foreach ($partners as $pat)
+                      <img src="{{ asset('images/logos/'. $pat->logo) }}" class="p-2 m-3" alt="" />
+                    @endforeach
                       
+                  
                 
                 
                   
-                      <img src="{{ asset('wb/img/dummies/clients/minet.png') }}" class="p-2 m-3" alt="" />
                       
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/apa.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/madison.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/aar.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/nhif.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/trident.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/kcb.jpg') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/stanbic.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/mtn.png') }}" class="p-2 m-3" alt="" />
-                      
-                
-                
-                  
-                      <img src="{{ asset('wb/img/dummies/clients/private.png') }}" class="p-2 m-3" alt="" />
                       
 
                              

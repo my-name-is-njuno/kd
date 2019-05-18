@@ -26,11 +26,11 @@ Route::group(['prefix' => 'lgds', 'middleware'=>'auth'], function() {
 	// manage partners
 	Route::get('/partners/manage', 'CrudController@partnerindex')->name('managepartners');
 	Route::post('/partners/store', 'CrudController@partneradd')->name('addpartner');
-	Route::get('/partners/delete', 'CrudController@partnerdelete')->name('deletepartners');
+	Route::get('/partners/delete{id}', 'CrudController@partnerdelete')->name('deletepartners');
 	// manage services
 	Route::get('/services/manage', 'CrudController@serviceindex')->name('manageservices');
 	Route::post('/services/store', 'CrudController@serviceadd')->name('addservice');
-	Route::get('/services/delete', 'CrudController@servicedelete')->name('deleteservices');
+	Route::get('/services/delete/{id}', 'CrudController@servicedelete')->name('deleteservices');
 
 	
 });

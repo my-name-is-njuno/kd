@@ -58,7 +58,7 @@
                             <label for="picture" class="col-md-4 col-form-label text-md-right">{{ __('picture') }}</label>
 
                             <div class="col-md-6">
-                                <input id="picture" type="file" class="form-control{{ $errors->has('picture') ? ' is-invalid' : '' }}" picture="picture" value="{{ old('picture') }}" required>
+                                <input id="picture" type="file" class="form-control{{ $errors->has('picture') ? ' is-invalid' : '' }}" name="picture" value="{{ old('picture') }}" required>
 
                                 @if ($errors->has('picture'))
                                     <span class="invalid-feedback" role="alert">
@@ -105,7 +105,7 @@
                     </th>
 
                     <th width="15%">
-                      Logo
+                      Picture
                     </th>
 
                     <th width="10%">
@@ -127,11 +127,11 @@
                       </td>
 
                       <td>
-                        {{ $serv->pic() }}
+                        <img src="{{ asset('/images/services/'.$serv->picture) }}" width="150">
                       </td>
 
                       <td>
-                        
+                        <a class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')"  href="{{ route('deleteservices', ['id'=>$serv->id]) }}">delete</a>
                       </td>
                     </tr>
 
@@ -139,7 +139,9 @@
                 </tbody>
               </table>
             </ul>
+            
 
+            {{ $services->links() }}
 
           </div>
 
@@ -151,5 +153,8 @@
       </div>
     </div>
   </div>
+
+
+
 
 @endsection

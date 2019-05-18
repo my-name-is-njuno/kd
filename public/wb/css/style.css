@@ -409,6 +409,7 @@ select.selectmenu {
 ==================================== */
 
 #featured {
+    border-top: 5px solid maroon ;
     background: #fcfcfc;
     position: relative;
     margin: 0;
@@ -1634,6 +1635,10 @@ article .align-right {
     line-height: 70px;
 }
 
+.icon-facebook, .icon-twitter {
+    font-size: 20px;
+}
+
 
 /* =============================
 20. Spacer, margin
@@ -1875,6 +1880,7 @@ article .align-right {
     .navbar .nav {
         margin-top: 40px;
         border-bottom: 1px solid #2d2d2d;
+        margin-bottom: 20px; 
     }
     .search {
         float: left;
@@ -2246,6 +2252,7 @@ article .align-right {
     #featured  {
         padding: 0;
         margin: 1px 0 1px;
+        border-top: 2px solid maroon ;
         background: #fff;
         position: relative;
         zoom: 1;

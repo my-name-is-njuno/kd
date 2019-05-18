@@ -39,7 +39,7 @@ Lavington Green Dental
                     <p>
                       Lavington Green Dental Suite is a Dental Surgery Consultancy Research and management organization.
                     </p>
-                    <a href="about.html" class="btn btn-theme">Read More</a>
+                    <a href="{{ route('aboutpage') }}" class="btn btn-theme">Read More</a>
                   </div>
                 </div>
                 <!-- Slide #2 caption -->
@@ -50,7 +50,7 @@ Lavington Green Dental
                       Lavington Chadarama Mall next to Lavington Mall on James Gichuru Road, 15 minutes Drive from Nairobi CBD<br>
                       
                     </p>
-                    <a href="contact.html" class="btn btn-theme">Read More</a>
+                    <a href="{{ route('contactpage') }}" class="btn btn-theme">Read More</a>
                   </div>
                 </div>
                 <!-- Slide #3 caption -->
@@ -60,7 +60,7 @@ Lavington Green Dental
                     <p>
                       We offer a wide range of dental services from extraction, dental surgeries, root canal etc.
                     </p>
-                    <a href="portfolio-2cols.html" class="btn btn-theme">Read More</a>
+                    <a href="{{ route('servicespage') }}" class="btn btn-theme">Read More</a>
                   </div>
                 </div>
               </div>

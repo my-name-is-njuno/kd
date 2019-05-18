@@ -23,13 +23,22 @@
     <link href="{{ asset('css/backend.css') }}" rel="stylesheet">
 
     @yield('extra-css')
+
+
+    <!-- Fav and touch icons -->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('wb/ico/favicon.ico') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('wb/ico/favicon.ico') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('wb/ico/favicon.ico') }}" />
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('wb/ico/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('wb/ico/favicon.ico') }}" />
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name') }}
+                <a class="navbar-brand" target="_blank" href="{{ url('/') }}">
+                    Go Back Home
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

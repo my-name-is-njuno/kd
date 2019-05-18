@@ -36,7 +36,7 @@ class Newmessage extends Mailable
     {
 
         return $this->markdown('mail.newmessage')
-                    ->to(['lavingtongreendental@gmail.com'])
+                    ->to(['pmnjuno@gmail.com'])
                     ->subject($this->message->name . ' New message For Lavington Green Dental');
     }
 }

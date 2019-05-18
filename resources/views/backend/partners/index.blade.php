@@ -82,7 +82,7 @@
 
 
           <div class="card-body">
-            <h5 class="card-title">Mange Partners</h5>
+            <h5 class="card-title">Manage Partners</h5>
             
             <ul class="list-unstyled">
               <table class="table table-bordered table-sm">
@@ -112,11 +112,11 @@
                       </td>
 
                       <td>
-                        {{ $pat->logo() }}
+                        <img src="{{ asset('/images/logos/'.$pat->logo) }}" width="150">
                       </td>
 
                       <td>
-                        
+                        <a class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')"  href="{{ route('deletepartners', ['id'=>$pat->id]) }}">delete</a>
                       </td>
                     </tr>
 
@@ -124,6 +124,8 @@
                 </tbody>
               </table>
             </ul>
+
+            {{ $partners->links() }}
 
 
           </div>
@@ -133,5 +135,9 @@
       </div>
     </div>
   </div>
+
+
+
+  
 
 @endsection

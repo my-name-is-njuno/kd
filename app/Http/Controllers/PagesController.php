@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Blog;
 
+use App\Service;
+
+use App\Partner;
+
 class PagesController extends Controller
 {
     public function index()
@@ -21,7 +25,8 @@ class PagesController extends Controller
 
     public function services()
     {
-        return view('frontend.services');
+        $services = Service::all();
+        return view('frontend.services', compact('services'));
     }
 
 
@@ -43,6 +48,7 @@ class PagesController extends Controller
 
     public function partners()
     {
-        return view('frontend.partners');
+        $partners = Partner::all();
+        return view('frontend.partners', compact('partners'));
     }
 }
