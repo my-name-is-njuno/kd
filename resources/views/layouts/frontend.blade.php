@@ -276,7 +276,8 @@
                             </address>
                             <p>
                                 <i class="icon-phone"></i> 0706 820099/ 0723711130/ 0720774844 <br>
-                                <i class="icon-envelope-alt"></i> lavingtongreendental@gmail.com, info@lavingtongreendental.co.ke
+                                <i class="icon-envelope-alt"></i> lavingtongreendental@gmail.com<br>
+                                <i class="icon-envelope-alt"></i> info@lavingtongreendental.co.ke
                             </p>
                         </div>
                     </div>
