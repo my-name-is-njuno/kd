@@ -98,11 +98,29 @@
                     </td>
 
                   </tr>
+
+
+
+                  <tr>
+
+                    <th>
+                      Booked On
+                    </th>
+
+                    <td>
+                      {{  date('d, F Y', strtotime($appt->created_at)) }}
+                    </td>
+
+                  </tr>
             
 
                
               </table>
             </ul>
+
+
+
+            <a class="btn btn-danger" onclick="myFunction()" href= {{ route('delApp', ['id'=>$appt->id]) }}  >Delete Appointment</a>
 
 
           </div>
@@ -111,4 +129,13 @@
     </div>
   </div>
 
+
+  <script type="text/javascript">
+    function myFunction() {
+      if (confirm("Are you sure you want to delete this appointment?")) {
+        return true;
+      }
+      return false
+    }
+  </script>
 @endsection
