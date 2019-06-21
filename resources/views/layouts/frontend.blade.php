@@ -250,7 +250,7 @@
                             <address>
                                 {{-- <strong>We operate from</strong><br> --}}
                                 Monday to Friday: 8.30am – 5.00pm.<br>
-                                Saturdays: 8.00am – 2.00pm. <br>
+                                Saturdays: 8.30am – 2.00pm. <br>
                                 Sundays and public holidays: closed
 
                             </address>
@@ -276,7 +276,7 @@
                             </address>
                             <p>
                                 <i class="icon-phone"></i> 0706 820099/ 0723711130/ 0720774844 <br>
-                                <i class="icon-envelope-alt"></i> lavingtondentalgreen@gmail.com
+                                <i class="icon-envelope-alt"></i> lavingtongreendental@gmail.com, info@lavingtongreendental.co.ke
                             </p>
                         </div>
                     </div>
