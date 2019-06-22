@@ -409,7 +409,7 @@ select.selectmenu {
 ==================================== */
 
 #featured {
-    border-top: 5px solid maroon ;
+    border-top: 2px solid maroon ;
     background: #fcfcfc;
     position: relative;
     margin: 0;
