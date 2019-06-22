@@ -131,7 +131,12 @@
                       </td>
 
                       <td>
+                        <a class="btn btn-outline-success btn-sm"  href="{{ route('showservices', ['id'=>$serv->id]) }}">view</a>
+
+                        <a class="btn btn-outline-info btn-sm" href="{{ route('editservices', ['id'=>$serv->id]) }}">edit</a>
+
                         <a class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')"  href="{{ route('deleteservices', ['id'=>$serv->id]) }}">delete</a>
+
                       </td>
                     </tr>
 

@@ -136,4 +136,68 @@ class CrudController extends Controller
 
 
     }
+
+
+
+
+
+
+
+
+    public function serviceedit($id)
+    {
+        $serv = Service::findOrFail($id);
+        return view('backend.services.edit', compact('serv'));
+    }
+
+
+
+
+
+
+    public function updateservice(Request $r, $id)
+    {
+        $ser = Service::findOrFail($id);
+
+        $this->validate($r, [
+            'name'=>'required',
+            'description'=>'required',
+        ]);
+
+
+        $ser->name = $r->name;
+        $ser->description = $r->description;
+
+        if ($r->file('picture')) {
+            $serviceimage = $r->file('picture');
+            $ext = $r->file('picture')->getClientOriginalExtension();
+            $servicename = str_slug($r->name). "_".time().".".$ext;
+            $servicename_large = str_slug($r->name). "-large_".time().".".$ext;
+            $serr = Image::make($serviceimage->getRealPath());
+            $destination = public_path('/images/services/' . $servicename);
+            $destination_large = public_path('/images/services/' . $servicename_large);
+            $serr->resize(570,400)->save($destination); 
+            $serr->resize(800,532)->save($destination_large); 
+
+            $ser->picture = $servicename;
+            $ser->picture_big = $servicename_large;
+        }
+        
+
+        $ser->save();
+
+        Session::flash('success','Service updated successfully');
+        return redirect()->route('showservices', ['id'=>$ser->id]);
+    }
+
+
+
+
+    public function serviceshow($id)
+    {
+        $serv = Service::findOrFail($id);
+        return view('backend.services.show', compact('serv'));
+    }
+
+
 }

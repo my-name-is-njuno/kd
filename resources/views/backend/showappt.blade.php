@@ -120,7 +120,7 @@
 
 
 
-            <a class="btn btn-danger" onclick="myFunction()" href= {{ route('delApp', ['id'=>$appt->id]) }}  >Delete Appointment</a>
+            <a class="btn btn-danger" onclick="return confirm('Are you sure?')"  href= {{ route('delApp', ['id'=>$appt->id]) }}  >Delete Appointment</a>
 
 
           </div>

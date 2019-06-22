@@ -32,6 +32,9 @@ Route::group(['prefix' => 'lgds', 'middleware'=>'auth'], function() {
 	// manage services
 	Route::get('/services/manage', 'CrudController@serviceindex')->name('manageservices');
 	Route::post('/services/store', 'CrudController@serviceadd')->name('addservice');
+	Route::post('/services/update/{id}', 'CrudController@updateservice')->name('updateservice');
+	Route::get('/services/show/{id}', 'CrudController@serviceshow')->name('showservices');
+	Route::get('/services/edit/{id}', 'CrudController@serviceedit')->name('editservices');
 	Route::get('/services/delete/{id}', 'CrudController@servicedelete')->name('deleteservices');
 
 	
