@@ -59,7 +59,7 @@ class AppointmentController extends Controller
 
             $app->save();
 
-            // Mail::send(new Newappointment($app));
+            Mail::send(new Newappointment($app));
 
             return response()->json(['success'=>'Appointment Booked Successfully, You will be contacted Soon. Thank You']);
         }
