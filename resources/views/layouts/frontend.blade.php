@@ -279,16 +279,14 @@
 
                                 <i class="icon-envelope-alt"></i> lavingtongreendentalgreen@gmail.com
                                 <br>
-                                <i class="icon-envelope-alt"></i> 
-                                info@lavingtondentalgreen.com
+                                <i class="icon-envelope-alt"></i> info@lavingtondentalgreen.com
 
-                                <i class="icon-envelope-alt"></i> lavingtongreendental@gmail.com<br>
-                                <i class="icon-envelope-alt"></i> info@lavingtongreendental.co.ke
+                                
 
                             </p>
 
 
-                            
+
                         </div>
                     </div>
                 </div>
