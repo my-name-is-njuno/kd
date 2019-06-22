@@ -9,6 +9,7 @@ use App\Appointment;
 use Mail;
 
 use App\Mail\Newappointment;
+use Session;
 
 class AppointmentController extends Controller
 {
@@ -78,9 +79,13 @@ class AppointmentController extends Controller
 
 
 
-    public function detele($id)
+    public function delete($id)
     {
-
+        $appt = Appointment::findOrFail($id);
+        if ($appt->delete()) {
+            Session::flash('success','Appointment deleted');
+            return redirect()->route('home');
+        }
     }
 
 

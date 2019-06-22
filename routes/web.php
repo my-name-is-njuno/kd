@@ -21,6 +21,8 @@ Route::group(['prefix' => 'lgds', 'middleware'=>'auth'], function() {
 
 	Route::get('/apt/view/{id}', 'AppointmentController@show')->name('showappt');
 
+	Route::get('/apt/delete/{id}', 'AppointmentController@delete')->name('delApp');
+
 
 
 	// manage partners
